@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background-color: #111;
+    background-color: #111111;
     margin-bottom: 60px;
 }
 
@@ -38,4 +38,138 @@ body {
 .text-white-center {
     text-align: center;
     color: white;
+}
+
+.git-link:link {
+    color: white;
+}
+    .git-link:hover {
+        color: gray;
+    }
+    .git-link:active {
+        color: green;
+    }
+
+
+
+
+
+
+
+
+
+body {
+    background: #001f33;
+    font-family: "Sitka Heading", sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.weapons-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.weapons-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.scroll-container {
+    width: 90%;
+}
+
+.weapons-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.weapon-card {
+    background: linear-gradient(145deg, #003366, #005592);
+    border-radius: 15px;
+    padding: 20px;
+    width: 180px;
+    color: #d9d9d9;
+    text-align: center;
+    cursor: default; /*after when click on each box will working change to "pointer" */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+    .weapon-card:hover {
+        transform: scale(1.08) rotate(-2deg);
+        box-shadow: 0 10px 20px grey;
+    }
+
+.weapon-name {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.weapon-image {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+    .weapon-image:hover {
+        transform: scale(1.1);
+    }
+
+.stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.value {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.weapons-note {
+    font-size: 12px;
+    margin: 20px 0;
+    text-align: center;
+    color: #aaa;
+    font-style: italic;
+}
+    
+/* Адаптив для мобилок */
+@media (max-width: 1200px) {
+    .weapons-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .weapons-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .weapons-list {
+        grid-template-columns: 1fr;
+    }
 }

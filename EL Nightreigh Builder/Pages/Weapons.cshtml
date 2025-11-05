@@ -4,6 +4,31 @@
     ViewData["Title"] = "Weapons";
 }
 
-<div class="text-white-center">
-    <h1 class="display-4">Weapons Page</h1>
+<div class="weapons-grid">
+    <div class="weapons-container">
+        <h1 class="weapons-title">Weapons and Stats</h1>
+
+        <div class="weapons-list">
+            @foreach (var w in Model.Weapons)
+            {
+                <div class="weapon-card" onclick="openWeaponInfo('@w.Name')">
+                    <h2 class="weapon-name">@w.Name</h2>
+                    <img src="@w.ImagePath" alt="@w.Name" class="weapon-image" />
+
+                    <div class="stats-grid">
+                        <div class="stat-row"><span>Physical:</span><span class="value">@w.Physic</span></div>
+                        <div class="stat-row"><span>Magic:</span><span class="value">@w.Magic</span></div>
+                        <div class="stat-row"><span>Fire:</span><span class="value">@w.Fire</span></div>
+                        <div class="stat-row"><span>Lightning:</span><span class="value">@w.Lightning</span></div>
+                        <div class="stat-row"><span>Holy:</span><span class="value">@w.Holy</span></div>
+                        <div class="stat-row"><span>Critical:</span><span class="value">@w.Critical</span></div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <p class="weapons-note">
+            *Weapon stats are approximate and may vary based on upgrades and player stats.
+        </p>
+    </div>
 </div>
