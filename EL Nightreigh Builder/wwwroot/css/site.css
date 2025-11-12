@@ -1,70 +1,121 @@
-html {
-  font-size: 16px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-    background-color: #111111;
-    margin-bottom: 60px;
+    margin: 0;
+    background: radial-gradient(circle at top, #000 20%, #001a33 100%);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+.main-body {
+    padding-top: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+    min-height: 80vh;
 }
 
-.navbar-custom {
-    background: linear-gradient(90deg, #111, #005592);
-    border-bottom: 2px solid #005592;
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0) 0%,
+    rgba(0, 10, 30, 0.6) 40%,
+    rgba(0, 26, 51, 1) 100%
+    );
+    border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+    backdrop-filter: blur(6px);
 }
 
-    .navbar-custom .nav-link {
-        color: white !important;
-    }
-
-        .navbar-custom .nav-link:hover {
-            color: skyblue !important;
-        }
-
-.text-white-center {
-    text-align: center;
-    color: white;
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px 200px;
 }
 
-.git-link:link {
-    color: white;
+.logo-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-    .git-link:hover {
-        color: gray;
-    }
-    .git-link:active {
-        color: green;
-    }
 
+.logo-img {
+    height: 55px;
+}
 
+.logo-text {
+    font-size: 2rem;
+    color: #0295FF;
+    line-height: 1.1;
+}
 
-
-
-
-
-
-
-body {
-    background: #001f33;
-    font-family: "Sitka Heading", sans-serif;
-    color: white;
+/* === Navigation === */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
     margin: 0;
     padding: 0;
+    font-size: 1.8rem;
 }
+
+    .nav-menu li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+        .nav-menu li a:hover {
+            color: #00bfff;
+            text-shadow: 0 0 10px #00bfff;
+        }
+
+/* === Burger menu === */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* === Footer === */
+.main-footer {
+    background: #000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px 10px;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+    .footer-links a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+        .footer-links a:hover {
+            color: #00bfff;
+            text-shadow: 0 0 10px #00bfff;
+        }
+
+/* === Body content === */
+.main-body {
+    padding-top: 40px;
+    min-height: 80vh;
+}
+
+
+
+
 
 .weapons-grid {
     display: flex;

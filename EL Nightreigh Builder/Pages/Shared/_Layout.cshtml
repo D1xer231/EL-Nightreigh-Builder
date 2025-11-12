@@ -4,55 +4,50 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ER Nightreigh Builder</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/EL_Nightreigh_Builder.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark navbar-custom mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">ER Nightreigh Builder</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse d-sm-inline-flex justify-content-end collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Weapons">Weapons</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Builds">Builds</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Runes">Runes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-block">
+                <img src="~/img/ico100.png" alt="ER Nightreigh Builder" class="logo-img"/>
+                <span class="logo-text">ER Nightreigh<br />Builder</span>
             </div>
-        </nav>
+
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <ul class="nav-menu">
+                <li><a asp-area="" asp-page="/Index">Home</a></li>
+                <li><a asp-area="" asp-page="/Builds">Builds</a></li>
+                <li><a asp-area="" asp-page="/Runes">Runes</a></li>
+                <li><a asp-area="" asp-page="/Weapons">Weapons</a></li>
+            </ul>
+        </div>
     </header>
-    <div class="container">
+
+    <div class="main-body container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - ER Nightreigh Builder - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-        <div class="container">
-            <a class="nav-link text-light" asp-area="" asp-page="/Weapons">Weapons</a>
-            <a class="nav-link text-light" asp-area="" asp-page="/Runes">Runes</a>
-            <a class="nav-link text-light" asp-area="" asp-page="/Builds">Builds</a>
+    <footer class="main-footer text-muted text-center">
+        <div class="footer-content">
+            <p>&copy; 2025 - ER Nightreigh Builder</p>
+            <div class="footer-links">
+                <a asp-area="" asp-page="/Weapons">Weapons</a>
+                <a asp-area="" asp-page="/Runes">Runes</a>
+                <a asp-area="" asp-page="/Builds">Builds</a>
+                <a asp-area="" asp-page="/Privacy">Privacy</a>
+            </div>
         </div>
     </footer>
 

@@ -11,12 +11,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     )
 );
 
-// Добавляем Razor Pages
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
-// Конфигурация пайплайна
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
